@@ -162,7 +162,10 @@ def custom_index(input_list, value):
 
     """
 
-    return 0
+    for i, item in enumerate(input_list):
+        if item == value:
+            return i
+
 
 
 def custom_count(input_list, value):
