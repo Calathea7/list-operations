@@ -114,12 +114,13 @@ def custom_remove(input_list, value):
     """
     count = 0
 
-    for i, item in enumerate(input_list):
-        if count > 0:
-            break
-        elif item == value:
-            input_list[i:i+1] = []
+    for item in input_list:
 
+        if item == value:
+            input_list[count:count+1] = []   
+            break   
+
+        count += 1                
 
     pass
 
@@ -162,9 +163,14 @@ def custom_index(input_list, value):
 
     """
 
-    for i, item in enumerate(input_list):
+    indx = 0
+
+    for item in input_list:
+
         if item == value:
-            return i
+            return indx
+
+        indx += 1
 
 
 
@@ -181,7 +187,13 @@ def custom_count(input_list, value):
 
     """
 
-    return 0
+    count = 0
+
+    for item in input_list:
+        if item == value:
+            count += 1
+
+    return count 
 
 
 def custom_reverse(input_list):
@@ -199,6 +211,8 @@ def custom_reverse(input_list):
         True
 
     """
+
+
 
     pass
 
